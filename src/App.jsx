@@ -5,6 +5,7 @@ import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 // import './App.css'
 import MainMenu from './Menu/MainMenu.jsx'
+import Config from './Config/Config.jsx'
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
     <>
      <Routes>
         <Route path="/" element={<MainMenu />} />
+        <Route path="/config" element={<Config />} />
      </Routes>
     </>
   )

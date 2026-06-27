@@ -39,7 +39,7 @@
     display: inline-block;
     transition: transform 0.2s ease, z-index 0s;
     transform: var(--base-transform);
-    padding: 0 50px; /* Extra horizontal room for the extreme wedge */
+    padding: 0 50px;
 }
 
 .profile {
@@ -129,7 +129,6 @@
     z-index: -1;
 }
 
-/* Trigger on parent hover */
 .menuOption:hover .textElement::before,
 .menuOption:hover .textElement::after {
     opacity: 1; 

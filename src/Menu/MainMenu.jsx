@@ -1,7 +1,9 @@
+import { useNavigate } from "react-router";
 import styles from './Menu.module.css'
 import menu from '../assets/Menu.mp4'
 import hoverSound from '../assets/MenuHover.wav'
 export default function MainMenu() {
+    const navigate = useNavigate();
     const playHover = () => {
         const sound = new Audio(hoverSound);
         sound.volume = 0.2;
@@ -12,9 +14,9 @@ export default function MainMenu() {
         { name: "EDUCATION", className: styles.education },
         // { name: "EQUIP", className: styles.equip },
         { name: "SKILLS", className: styles.skills },
-        { name: "PROJECTS", className: styles.projects },
+        { name: "PROJECTS", className: styles.projects},
         { name: "EXPERIENCE", className: styles.experience },
-        { name: "CONFIG", className: styles.config }
+        { name: "CONFIG", className: styles.config},
     ];
     return (
         <div className={styles.mainContainer}>
@@ -28,6 +30,7 @@ export default function MainMenu() {
                         key={opt.name} 
                         className={`${styles.menuOption} ${opt.className}`}
                         onMouseEnter={playHover} 
+                        onClick={() => navigate(`/${opt.name.toLowerCase()}`)}
                     >
                         <span className={styles.textElement}>{opt.name}</span>
                     </div>
