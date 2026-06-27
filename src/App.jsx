@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Routes, Route } from "react-router";
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
@@ -9,7 +10,9 @@ function App() {
 
   return (
     <>
-      <MainMenu />
+     <Routes>
+        <Route path="/" element={<MainMenu />} />
+     </Routes>
     </>
   )
 }
