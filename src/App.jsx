@@ -2,9 +2,10 @@ import { useState } from 'react'
 import { Routes, Route } from "react-router";
 // import './App.css'
 import MainMenu from './Menu/MainMenu.jsx'
-import Config from './Config/Config.jsx'
-import Education from './Education/Education.jsx'
 import Profile from './Profile/Profile.jsx'
+import Education from './Education/Education.jsx'
+import Skills from './Skills/Skills.jsx'
+import Config from './Config/Config.jsx'
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<MainMenu />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/education" element={<Education />} />
+        <Route path="/skills" element={<Skills />} />
         <Route path="/config" element={<Config />} />
      </Routes>
     </>

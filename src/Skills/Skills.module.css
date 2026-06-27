@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+.mainContainer {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.videoBg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.back{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    letter-spacing: -5px;
+    font-size: 4.5rem;
+    color: #12c7ff;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    transition: transform 0.2s ease, z-index 0s;
+    transform: var(--base-transform);
+    padding: 0 50px;
+    --base-transform: skewX(-15deg) rotate(2deg);
+    margin-top: 40px;
+    margin-left: 20px;
+}
+
+.textElement {
+    position: relative;
+    display: inline-block;
+    z-index: 2;
+}
+
+.textElement::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -6px;
+    right: -14px;
+    bottom: -14px;
+    background-color: #ff0055;
+    clip-path: polygon(0% 50%, 100% 10%, 78% 100%);
+    opacity: 0;
+    transition: opacity 0.15s ease;
+    z-index: -1;
+}
+
+.textElement::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ffffff;
+    clip-path: polygon(0% 50%, 100% 10%, 78% 100%);
+    opacity: 0;
+    transition: opacity 0.15s ease;
+    z-index: -1;
+}
+
+.back:hover .textElement::before,
+.back:hover .textElement::after { opacity: 1; }
+
+.back:hover .textElement { color: #000000; }
+.back:hover { z-index: 10; }
