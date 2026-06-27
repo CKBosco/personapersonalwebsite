@@ -6,6 +6,7 @@ import Profile from './Profile/Profile.jsx';
 import Education from './Education/Education.jsx';
 import Skills from './Skills/Skills.jsx';
 import Projects from './Projects/Projects.jsx';
+import Experience from './Experience/Experience.jsx';
 import Config from './Config/Config.jsx';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/education" element={<Education />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/skills" element={<Skills />} />
+        <Route path="/experience" element={<Experience />} />
         <Route path="/config" element={<Config />} />
      </Routes>
     </>
