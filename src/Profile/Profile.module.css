@@ -20,6 +20,27 @@
     object-fit: cover;
     z-index: -1;
 }
+    
+.infoContainer {
+    position: absolute;
+    top: 20vh;
+    left: 3vw;
+    width: 35vw;
+    height: 75vh;
+    background-color: #162047;
+    opacity: 90%;
+    clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 0% 100%);
+}
+
+.info {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    letter-spacing: -2px;
+    font-size: 2rem;
+    color: #12c7ff;
+    padding: 30px;
+}
+
 
 .back{
     font-family: 'Open Sans', sans-serif;
@@ -36,6 +57,7 @@
     --base-transform: skewX(-15deg) rotate(2deg);
     margin-top: 40px;
     margin-left: 20px;
+    user-select: none;
 }
 
 .textElement {
