@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Routes, Route } from "react-router";
 // import './App.css'
+import VideoTransitionOverlay from './Transition/VideoTransitionOverlay.jsx';
 import MainMenu from './Menu/MainMenu.jsx';
 import Profile from './Profile/Profile.jsx';
 import Education from './Education/Education.jsx';
@@ -13,6 +14,7 @@ function App() {
 
   return (
     <>
+    <VideoTransitionOverlay />
      <Routes>
         <Route path="/" element={<MainMenu />} />
         <Route path="/profile" element={<Profile />} />

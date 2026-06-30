@@ -1,13 +1,14 @@
 import { useNavigate } from "react-router";
-import styles from './Experience.module.css'
-import expVd from '../assets/itemsM.mp4'
-import hoverSound from '../assets/MenuHover.wav'
+import styles from './Experience.module.css';
+import { useTransitionNavigate } from '../Transition/useTransitionNavigate';
+import expVd from '../assets/itemsM.mp4';
+import hoverSound from '../assets/MenuHover.wav';
 export default function Experience() {
-    const navigate = useNavigate();
+    const navigate = useTransitionNavigate();
     const playHover = () => {
         const sound = new Audio(hoverSound);
         sound.volume = 0.2;
-        sound.play();
+        sound.play().catch(() => {});
     };
     return (
         <div className={styles.mainContainer}>

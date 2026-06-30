@@ -1,13 +1,14 @@
 import { useNavigate } from "react-router";
-import styles from './Education.module.css'
-import eduVd from '../assets/questM.mp4'
-import hoverSound from '../assets/MenuHover.wav'
+import styles from './Education.module.css';
+import { useTransitionNavigate } from '../Transition/useTransitionNavigate';
+import eduVd from '../assets/questM.mp4';
+import hoverSound from '../assets/MenuHover.wav';
 export default function Education() {
-    const navigate = useNavigate();
+    const navigate = useTransitionNavigate();
     const playHover = () => {
         const sound = new Audio(hoverSound);
         sound.volume = 0.2;
-        sound.play();
+        sound.play().catch(() => {});
     };
     return (
         <div className={styles.mainContainer}>

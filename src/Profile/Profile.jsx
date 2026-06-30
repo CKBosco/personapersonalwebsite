@@ -1,13 +1,14 @@
 import { useNavigate } from "react-router";
-import styles from './Profile.module.css'
-import proVd from '../assets/items.mp4'
-import hoverSound from '../assets/MenuHover.wav'
+import styles from './Profile.module.css';
+import { useTransitionNavigate } from '../Transition/useTransitionNavigate';
+import proVd from '../assets/items.mp4';
+import hoverSound from '../assets/MenuHover.wav';
 export default function Profile() {
-    const navigate = useNavigate();
+    const navigate = useTransitionNavigate();
     const playHover = () => {
         const sound = new Audio(hoverSound);
         sound.volume = 0.2;
-        sound.play();
+        sound.play().catch(() => {});
     };
     return (
         <div className={styles.mainContainer}>

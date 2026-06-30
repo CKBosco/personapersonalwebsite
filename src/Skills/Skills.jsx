@@ -1,13 +1,14 @@
 import { useNavigate } from "react-router";
-import styles from './Skills.module.css'
-import skillVd from '../assets/skills.mp4'
-import hoverSound from '../assets/MenuHover.wav'
+import styles from './Skills.module.css';
+import { useTransitionNavigate } from '../Transition/useTransitionNavigate';
+import skillVd from '../assets/skills.mp4';
+import hoverSound from '../assets/MenuHover.wav';
 export default function Skills() {
-    const navigate = useNavigate();
+    const navigate = useTransitionNavigate();
     const playHover = () => {
         const sound = new Audio(hoverSound);
         sound.volume = 0.2;
-        sound.play();
+        sound.play().catch(() => {});
     };
     return (
         <div className={styles.mainContainer}>
