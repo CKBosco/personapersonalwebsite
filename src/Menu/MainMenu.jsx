@@ -26,6 +26,11 @@ export default function MainMenu() {
                 className={styles.videoBg}
                 src= {menu} 
                 autoPlay loop muted playsInline />
+            <div className={styles.cornerTrapezoid}>
+                <div className={styles.name}>Bosco Chan</div>
+                <div className={styles.email}>chankinbok@gmail.com</div>
+                <div className={styles.phone}>(+44) 7547667143    |   (+852) 55473050</div>
+            </div>
             <div className={styles.optionsContainer}>
                 {options.map((opt) => (
                     <div 
