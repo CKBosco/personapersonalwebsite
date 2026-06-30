@@ -10,7 +10,7 @@ export default function Profile() {
         sound.volume = 0.2;
         sound.play().catch(() => {});
     };
-    const info = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate"
+    const info = "I'm a Computer Science and Artificial Intelligence student at Loughborough University, having just completed my second year. Over the past two years I've built a strong foundation in full-stack development, database systems, and software engineering through a range of independent projects. I'm proficient in Python, Java, JavaScript, HTML/CSS, PHP, and SQL, with growing experience in React and Laravel for collaborative, team-based development. Outside of coursework, I enjoy exploring AI-assisted development practices and applying technical skills to real-world problems. When I'm not coding, you'll find me experimenting with video editing and photography, playing piano, or shooting pool."
     return (
         <div className={styles.mainContainer}>
             <video
