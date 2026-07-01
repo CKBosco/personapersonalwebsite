@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-.mainContainer {
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');.mainContainer {
     position: relative;
     height: 100vh;
     width: 100vw;
@@ -19,6 +18,112 @@
     height: 100%;
     object-fit: cover;
     z-index: -1;
+}
+
+.educationContainer {
+    position: absolute;
+    top: 17vh;
+    left: 8vw;
+    width: 58vw;
+    height: 75vh;
+    background-color: #162047;
+    display: flex;
+    flex-direction: column;
+    /* opacity: 90%; */
+    /* box-sizing: border-box;
+    overflow: hidden; */
+}
+
+.statusBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: orange;
+    padding: 5px;
+    font-family: "Rubik", sans-serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+    letter-spacing: -1px;
+}
+
+.schoolStatus, .status{
+    transform: skewX(-10deg);
+}
+
+.schoolStatus{
+    margin-left: 250px;
+}
+
+.status{
+    margin-right: 85px;
+}
+.schoolArea{
+    background-color: green;
+    height: 35vh;
+}
+
+.schoolContainer{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.school{
+    font-family: "Rubik", sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    margin-left: 75px;
+}
+
+.progress{
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    letter-spacing: -2px;
+    margin-right: 50px;
+}
+
+.detailContainer{
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.degreeDateContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    transform: skewX(-10deg);
+}
+
+.degree{
+    font-family: "Rubik", sans-serif;
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin-left: 75px;
+    letter-spacing: -1px;
+}
+
+.date{
+    font-family: "Rubik", sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-right: 20px;
+    letter-spacing: -1px;
+}
+
+.details{
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: -2px;
+    margin-left: 100px;
 }
 
 .back{

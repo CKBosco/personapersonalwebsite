@@ -18,14 +18,14 @@ export default function Profile() {
                 src= {proVd} 
                 autoPlay loop muted playsInline 
             />
-            <div className={styles.infoContainer}>
-                <div className={styles.info}>{info}</div >
-            </div>
             <div className={styles.back}
                 onMouseEnter={playHover}
                 onClick={() => navigate("/")}
             >
                 <span className={styles.textElement}>BACK</span>
+            </div>
+            <div className={styles.infoContainer}>
+                <div className={styles.info}>{info}</div >
             </div>
         </div>
     )
