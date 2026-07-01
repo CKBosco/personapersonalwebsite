@@ -30,18 +30,24 @@
     background-color: #162047;
     opacity: 90%;
     clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 0% 100%);
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .info {
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
-    letter-spacing: -2px;
-    font-size: 1.8rem;
+    letter-spacing: -1px;
+    /* font-size: clamp( 1.4rem, 1.3vw, 1.8rem); */
+    font-size: 1.7rem;
+    line-height: 1.4;
     color: #12c7ff;
-    padding: 30px;
-    margin-right: 20px;
+    padding: 30px 40px 30px 30px;
+    box-sizing: border-box;
+    height: 100%;
+    overflow-y: auto;
+    user-select: none;
 }
-
 
 .back{
     font-family: 'Open Sans', sans-serif;
