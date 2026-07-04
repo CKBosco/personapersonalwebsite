@@ -26,7 +26,7 @@
     left: 8vw;
     width: 58vw;
     height: 75vh;
-    background-color: #162047;
+    /* background-color: #162047; */
     display: flex;
     flex-direction: column;
     /* opacity: 90%; */
@@ -39,16 +39,18 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: orange;
+    /* background-color: orange; */
     padding: 5px;
     font-family: "Rubik", sans-serif;
     font-weight: 600;
     font-size: 1.3rem;
     letter-spacing: -1px;
+    user-select: none;
 }
 
 .schoolStatus, .status{
     transform: skewX(-10deg);
+    color: #6d6e98;
 }
 
 .schoolStatus{
@@ -56,20 +58,70 @@
 }
 
 .status{
-    margin-right: 85px;
+    margin-right: 70px;
 }
 .schoolArea{
-    background-color: green;
+    /* background-color: green; */
     height: 35vh;
 }
 
 .schoolContainer{
-    background-color: white;
+    /* background-color: white; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 5px;
+    position: relative;
+    cursor: pointer;
+    z-index: 0;
+    border-radius: 7px;
+}
+
+.schoolContainer:hover{
+    z-index: 10;
+}
+
+.schoolContainer::before{
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ff0055;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    z-index: 0;
+    border-radius: 7px;
+}
+
+.schoolContainer::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ffffff;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    z-index: 1;
+    border-radius: 7px;
+}
+
+.schoolContainer:hover::before{
+    opacity: 90%;
+}
+.schoolContainer:hover::after{
+    opacity: 1;
+}
+
+.school,
+.inProgress,
+.completed{
+    position: relative;
+    z-index: 2;
 }
 
 .school{
@@ -77,21 +129,48 @@
     font-weight: 600;
     font-size: 2rem;
     margin-left: 75px;
+    color: #69f2f8;
+    user-select: none;
 }
 
-.progress{
+.inProgress, .completed{
     font-family: "Open Sans", sans-serif;
     font-weight: 700;
     font-size: 1.8rem;
-    letter-spacing: -2px;
-    margin-right: 50px;
+    border-radius: 7px;
+    letter-spacing: -3px;
+    user-select: none;
+}
+
+.inProgress{
+    background-color: #66fcfb;
+    margin-right: 20px;
+    padding: 0 25px 2px 25px;
+    color: #000356;
+}
+
+.completed{
+    background-color: #020c72;
+    margin-right: 20px;
+    padding: 0 55px 0 55px;
+    color: #9b9c93;
+}
+
+.schoolContainer:hover .school{
+    color:  black;
+}
+
+.schoolContainer:hover .inProgress{
+    color:  white;
+    background-color: black;
 }
 
 .detailContainer{
-    background-color: red;
+    /* background-color: red; */
     display: flex;
     flex-direction: column;
     flex: 1;
+    user-select: none;
 }
 
 .degreeDateContainer{
@@ -105,25 +184,30 @@
 .degree{
     font-family: "Rubik", sans-serif;
     font-weight: 600;
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     margin-left: 75px;
     letter-spacing: -1px;
+    color: #0ae4f9;
 }
 
 .date{
     font-family: "Rubik", sans-serif;
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    margin-top: 3px;
     margin-right: 20px;
     letter-spacing: -1px;
+    color: #0ae4f9;
 }
 
 .details{
-    font-family: "Open Sans", sans-serif;
-    font-weight: 700;
-    font-size: 1.5rem;
-    letter-spacing: -2px;
+    font-family: "Rubik", sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    letter-spacing: -1px;
+    color: white;
     margin-left: 100px;
+    white-space: pre-line;
 }
 
 .back{
