@@ -77,3 +77,21 @@
 
 .back:hover .textElement { color: #000000; }
 .back:hover { z-index: 10; }
+
+.tsContainer{
+    background-color: black;
+    position: absolute;
+    top: 30vh;
+    left: 2vw;
+    width: 30vw;
+    height: 65vh;
+}
+
+.osContainer{
+    background-color: white;
+    position: absolute;
+    top: 5vh;
+    right: 2vw;
+    width: 30vw;
+    height: 65vh;
+}

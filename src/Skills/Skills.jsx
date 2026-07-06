@@ -23,6 +23,11 @@ export default function Skills() {
             >
                 <span className={styles.textElement}>BACK</span>
             </div>
+            <div className={styles.tsContainer}>
+            </div>
+            <div className={styles.osContainer}>
+                
+            </div>
         </div>
     )
 }
