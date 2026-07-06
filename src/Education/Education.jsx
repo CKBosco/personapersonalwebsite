@@ -14,7 +14,7 @@ export default function Education() {
     const uniDetails = {
         degree: "BSc Computer Science and Artificial Intelligence",
         date: "2024 - Present",
-        details: "Key Modules:\nComing soon"
+        details: "Key Modules:\nFormal Methods (92%)\nTeam Projects (90%)\nFormal Languages and Theory of Computation (89%)\nAI Methods (86%)\nOperating Systems, Networks and the Internet (86%)\nWeb Programming (83%)\nObject-Oriented Programming (82%)"
     }
     const colDetails = {
         degree: "A-Levels",
@@ -36,17 +36,17 @@ export default function Education() {
                 <span className={styles.textElement}>BACK</span>
             </div>
             <div className={styles.educationContainer}>
-                <div className={styles.schoolArea}>
+                <div className={styles.schoolArea} >
                     <div className={styles.statusBar}>
                         <div className={styles.schoolStatus}>Name</div>
                         <div className={styles.status}>Status</div>
                     </div>
                     {/* onMouseEnter */}
-                    <div className={styles.schoolContainer} onClick={() => setDetails(uniDetails)}>
+                    <div className={styles.schoolContainer} onClick={() => setDetails(uniDetails)} onMouseEnter={playHover}>
                         <div className={styles.school}>Loughborough University</div>
                         <div className={styles.inProgress}>InProgress</div>
                     </div>
-                    <div className={styles.schoolContainer} onClick={() => setDetails(colDetails)}>
+                    <div className={styles.schoolContainer} onClick={() => setDetails(colDetails)} onMouseEnter={playHover}>
                         <div className={styles.school}>Ratcliffe College</div>
                         <div className={styles.completed}>Done</div>
                     </div>

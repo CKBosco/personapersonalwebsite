@@ -25,7 +25,7 @@
     top: 17vh;
     left: 8vw;
     width: 58vw;
-    height: 75vh;
+    height: 70vh;
     /* background-color: #162047; */
     display: flex;
     flex-direction: column;
@@ -152,7 +152,8 @@
 .completed{
     background-color: #020c72;
     margin-right: 20px;
-    padding: 0 55px 0 55px;
+    padding: 0 53px 0 53px;
+    border: 2px solid #9b9c93;
     color: #9b9c93;
 }
 
