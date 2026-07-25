@@ -32,7 +32,7 @@ export default function Skills() {
             </div>
             <div className={styles.osContainer}>
                 <div className={styles.osTitle}>Other Skills</div>
-                <div className={styles.osList}>{`Problem Solving\nCritical Thinking\nCommunication\nTeamwork\nAdaptability\nTime Management\nResponsible\nVideo editing\nGraphic design\nCustomer service experience`}</div>
+                <div className={styles.osList}>{`Problem Solving\nCritical Thinking\nCommunication\nTeamwork\nAdaptability\nTime Management\nResponsible\nVideo editing\nGraphic design\nCustomer service experience\nEvent Organisation`}</div>
             </div>
         </div>
     )
