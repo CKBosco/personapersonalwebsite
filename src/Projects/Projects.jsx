@@ -5,9 +5,8 @@ import { useTransitionNavigate } from '../Transition/useTransitionNavigate';
 import ProjVd from '../assets/skillsM.mp4';
 import hoverSound from '../assets/MenuHover.wav';
 import ProjectDetail from './ProjectDetail';
-import mitsuru from '../assets/projectCharacters/overview/mitsuru.png';
-import mitsuruPortrait from '../assets/projectCharacters/fullPortrait/mitsuruPortrait.png';
-import mitsuruShadow from '../assets/projectCharacters/shadow/mitsuruShadow.png';
+import { projects } from './ProjectList';
+
 export default function Projects() {
     const navigate = useTransitionNavigate();
     const playHover = () => {
@@ -15,18 +14,6 @@ export default function Projects() {
         sound.volume = 0.2;
         sound.play().catch(() => {});
     };
-    const projects = [
-        {
-            id: 1,
-            name: "Project",
-            tools: "tools",
-            date: "date",
-            details: "details",
-            image: mitsuru,
-            portrait: mitsuruPortrait,
-            shadow: mitsuruShadow
-        }
-    ];
     const [selectedProject, setSelectedProject] = useState(null);
     return (
             <div className={styles.mainContainer}>
