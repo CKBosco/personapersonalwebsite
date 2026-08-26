@@ -1,9 +1,13 @@
 import { useNavigate } from "react-router";
+import { useState } from "react";
 import styles from './Projects.module.css';
 import { useTransitionNavigate } from '../Transition/useTransitionNavigate';
 import ProjVd from '../assets/skillsM.mp4';
 import hoverSound from '../assets/MenuHover.wav';
-import mitsuru from '../assets/projectCharacters/mitsuru.png';
+import ProjectDetail from './ProjectDetail';
+import mitsuru from '../assets/projectCharacters/overview/mitsuru.png';
+import mitsuruPortrait from '../assets/projectCharacters/fullPortrait/mitsuruPortrait.png';
+import mitsuruShadow from '../assets/projectCharacters/shadow/mitsuruShadow.png';
 export default function Projects() {
     const navigate = useTransitionNavigate();
     const playHover = () => {
@@ -18,32 +22,37 @@ export default function Projects() {
             tools: "tools",
             date: "date",
             details: "details",
-            image: {mitsuru}
+            image: mitsuru,
+            portrait: mitsuruPortrait,
+            shadow: mitsuruShadow
         }
-    ]
+    ];
+    const [selectedProject, setSelectedProject] = useState(null);
     return (
-        <div className={styles.mainContainer}>
-            <video
-                className={styles.videoBg}
-                src= {ProjVd} 
-                autoPlay loop muted playsInline 
-            />
-            <div className={styles.back}
-            onMouseEnter={playHover}
-            onClick={() => navigate("/")}
-            >
-                <span className={styles.textElement}>BACK</span>
-            </div>
+            <div className={styles.mainContainer}>
+                <video
+                    className={styles.videoBg}
+                    src= {ProjVd} 
+                    autoPlay loop muted playsInline 
+                />
+                <div className={styles.back}
+                onMouseEnter={playHover}
+                onClick={() => navigate("/")}
+                >
+                    <span className={styles.textElement}>BACK</span>
+                </div>
 
-            <div className={styles.projectsContainer}>
-                {projects.map((pro) => (
-                    <div key={pro.id} className={styles.projectCard}>
-                        <img src={pro.image.mitsuru} alt={pro.name} className={styles.projectImage} />
-                        <div className={styles.projectName}>{pro.name}</div>
-                        <div className={styles.projectDate}>{pro.date}</div>
-                    </div>
-                ))}
+                <div className={styles.projectsContainer}>
+                    {projects.map((pro) => (
+                        <div key={pro.id} className={styles.projectCard} onClick={() => setSelectedProject(pro)}>
+                            <img src={pro.image} alt={pro.name} className={styles.projectImage} />
+                            <div className={styles.projectName}>{pro.name}</div>
+                            <div className={styles.projectDate}>{pro.date}</div>
+                        </div>
+                    ))}
+                </div>
+                <ProjectDetail selectedProject={selectedProject} setSelectedProject={setSelectedProject} />
             </div>
-        </div>
+            
     )
 }

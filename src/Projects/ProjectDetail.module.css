@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+.pdDim{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainContainer {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    /* height: 100%; */
+    /* overflow: hidden; */
+    
+}
+
+.pdContainer {
+    background-color: white;
+    height: 55vh;
+    color: black;
+    /* clip-path: polygon(0 27%, 88% 0, 100% 0%, 100% 40%, 0 78%); */
+    /* transform: rotate(-10deg); */
+    width: 130vw;
+    margin-left: -5vw;
+    margin-right: -5vw;
+    color: black;
+    margin-bottom: 25vh;
+    transform: rotate(-7deg) skewX(-12deg);
+    transform-origin: center center;
+    border-top: 7px solid;
+    border-color: #ff0055;
+}
+
+
+.projectId  {
+    background-color: white;
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    position: absolute;
+    font-size: 30rem;
+    top: 0;
+    left: 0;
+    left: 50px;
+    height: 100%;
+    padding: 20px;
+    margin-left: 5vw;
+    box-sizing: border-box;
+    z-index: 400;
+    display: flex;
+    align-items: center;
+    
+}
+
+.topContainer {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    gap: 300px;
+    height: 11vh;
+    position: relative;
+    margin-top: 30px;
+}
+
+.projectName{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    font-size: 2.5rem;
+    margin-left: 25vw;
+    margin-top: 1vh;
+}
+
+.toolDateContainer{
+    font-family: 'Rubik', sans-serif;
+    margin-top: 1vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.tools{
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.date{
+    font-weight: 400;
+    font-size: 1.7rem;
+}
+
+.details{
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin-left: 25vw;
+    margin-top: 2vh;
+}
+
+.bottomLine{
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    width: 100%;
+    height: 5vh;
+    background-color: black;
+}
+
+.pdImageContainer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 50vw;
+    z-index: 10;
+    overflow: hidden;
+    pointer-events: none;
+    clip-path: polygon(
+        40% 0%,      /* top-left point */
+        100% 0%,     /* top edge ends here, still flat */
+        100% 50%,    /* new: drops the "corner" down */
+        50% 110%,    /* bottom point of the long diagonal edge */
+        8% 100%,     /* bottom-left corner */
+        5% 80%       /* notch */   /* notch — where the left edge steps in */
+    );
+    background-color: rgba(99, 99, 99, 0.5);
+}
+
+.pdImageContainer img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom right;
+    
+}
+
+.shadowImg {
+    z-index: 1;
+    transform: translate(-20px, 55px) scale(1.4); /* (+x,+y) */
+}
+
+.portraitImg {
+    z-index: 2;
+    transform: translate(85px, 0) scale(1.3); /* (+x,+y) */
+}
