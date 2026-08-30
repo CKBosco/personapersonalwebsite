@@ -19,6 +19,7 @@
     align-items: center;
     /* height: 100%; */
     /* overflow: hidden; */
+    user-select: none;
     
 }
 
@@ -64,7 +65,7 @@
     color: white;
     display: flex;
     flex-direction: row;
-    gap: 300px;
+    gap: 150px;
     height: 11vh;
     position: relative;
     margin-top: 30px;
@@ -73,9 +74,10 @@
 .projectName{
     font-family: 'Open Sans', sans-serif;
     font-weight: 500;
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-left: 25vw;
     margin-top: 1vh;
+    width: 20vw;
 }
 
 .toolDateContainer{
@@ -101,6 +103,7 @@
     font-size: 1.5rem;
     margin-left: 25vw;
     margin-top: 2vh;
+    width: 30vw;
 }
 
 .bottomLine{

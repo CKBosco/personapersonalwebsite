@@ -1,9 +1,32 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from './ProjectDetail.module.css';
-export default function ProjectDetail({ selectedProject, setSelectedProject }) {
+export default function ProjectDetail({ selectedProject, setSelectedProject, projects }) {
     if (!selectedProject) return null;
-    return (
-        <div className={styles.pdDim} onClick={() => setSelectedProject(null)}>
+    useEffect(() => {
+        if (!selectedProject || !projects || projects.length === 0) return;
+
+        const handleKeyDown = (event) => {
+        const key = event.key.toLowerCase();
+        const currentIndex = projects.findIndex((p) => p.id === selectedProject.id);
+
+        if (currentIndex === -1) return;
+
+        if (key === 'escape') {
+            setSelectedProject(null);
+        } else if (key === 'e') {
+            const nextIndex = (currentIndex + 1) % projects.length;
+            setSelectedProject(projects[nextIndex]);
+        } else if (key === 'q') {
+            const prevIndex = (currentIndex - 1 + projects.length) % projects.length;
+            setSelectedProject(projects[prevIndex]);
+        }
+        };
+
+        window.addEventListener('keydown', handleKeyDown);
+        return () => window.removeEventListener('keydown', handleKeyDown);
+    }, [selectedProject, setSelectedProject, projects]);
+        return (
+            <div className={styles.pdDim} onClick={() => setSelectedProject(null)} >
             <div className={styles.mainContainer} onClick={(e) => e.stopPropagation()}>
                 <div className={styles.pdContainer}>
                     <div>

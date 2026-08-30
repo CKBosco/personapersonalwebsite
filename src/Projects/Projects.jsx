@@ -38,7 +38,7 @@ export default function Projects() {
                         </div>
                     ))}
                 </div>
-                <ProjectDetail selectedProject={selectedProject} setSelectedProject={setSelectedProject} />
+                <ProjectDetail selectedProject={selectedProject} setSelectedProject={setSelectedProject} projects={projects} />
             </div>
             
     )
