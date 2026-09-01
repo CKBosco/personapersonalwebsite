@@ -10,6 +10,12 @@ import yukariShadow from '../assets/projectCharacters/shadow/yukariShadow.png';
 import aki from '../assets/projectCharacters/overview/aki.png';
 import akiPortrait from '../assets/projectCharacters/fullPortrait/akiPortrait.png';
 import akiShadow from '../assets/projectCharacters/shadow/akiShadow.png';
+import fuuka from '../assets/projectCharacters/overview/fuuka.png';
+import fuukaPortrait from '../assets/projectCharacters/fullPortrait/fuukaPortrait.png';
+import fuukaShadow from '../assets/projectCharacters/shadow/fuukaShadow.png';
+import aigis from '../assets/projectCharacters/overview/aigis.png';
+import aigisPortrait from '../assets/projectCharacters/fullPortrait/aigisPortrait.png';
+import aigisShadow from '../assets/projectCharacters/shadow/aigisShadow.png';
 
 export const projects = [
     {
@@ -51,6 +57,46 @@ export const projects = [
         image: aki,
         portrait: akiPortrait,
         shadow: akiShadow
+    },
+    {
+        id: 5,
+        name: "Event booking system",
+        tools: "Java, Eclipse IDE",
+        date: "Mar 2025 - May 2025",
+        details: "An event booking system that enables seamless ticket purchasing for customers while providing administrators with tools to manage events. Featuring role-based Graphical User Interfaces, the application ensures data persistence through file I/O for storing user and event records.",
+        image: fuuka,
+        portrait: fuukaPortrait,
+        shadow: fuukaShadow
+    },
+    {
+        id: 6,
+        name: "ENT consultant's website",
+        tools: "HTML, JavaScript, PHP",
+        date: "Mar 2025 - May 2025",
+        details: "A consultant directory website that allows users to seamlessly search and filter ENT specialists. Featuring asynchronous backend integration, the platform retrieves real-time database query results to deliver smooth, instant updates without full-page reloads.",
+        image: aigis,
+        portrait: aigisPortrait,
+        shadow: aigisShadow
+    },
+    {
+        id: 7,
+        name: "Music records database system",
+        tools: "Python, Jupyter Notebook",
+        date: "Oct 2024 - Dec 2024",
+        details: "A database management system for tracking music record rentals and returns. The application features text-file-based data persistence and delivers interactive visual analytics to track rental trends, customer patterns, and album ratings.",
+        image: mitsuru,
+        portrait: mitsuruPortrait,
+        shadow: mitsuruShadow
+    },
+    {
+        id: 8,
+        name: "Employee payroll system",
+        tools: "C++, Arduino",
+        date: "Oct 2024 - Dec 2024",
+        details: "A payroll management system designed to process employee salary, pension, and tax data with real-time LCD screen output. Featuring a robust command-line interface for managing employee records, the system incorporates strict input validation to ensure high data integrity and error-free updates.",
+        image: junpei,
+        portrait: junpeiPortrait,
+        shadow: junpeiShadow
     }
 
 ];  
