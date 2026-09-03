@@ -9,20 +9,25 @@ import Skills from './Skills/Skills.jsx';
 import Projects from './Projects/Projects.jsx';
 import Experience from './Experience/Experience.jsx';
 import Config from './Config/Config.jsx';
-
+import hoverSound from './assets/MenuHover.wav';
+const playHover = () => {
+    const sound = new Audio(hoverSound);
+    sound.volume = 0.2;
+    sound.play().catch(() => {});
+};
 function App() {
 
   return (
     <>
     <VideoTransitionOverlay />
      <Routes>
-        <Route path="/" element={<MainMenu />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/education" element={<Education />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/skills" element={<Skills />} />
-        <Route path="/experience" element={<Experience />} />
-        <Route path="/config" element={<Config />} />
+        <Route path="/" element={<MainMenu playHover={playHover} />} />
+        <Route path="/profile" element={<Profile playHover={playHover} />} />
+        <Route path="/education" element={<Education playHover={playHover} />} />
+        <Route path="/projects" element={<Projects playHover={playHover} />} />
+        <Route path="/skills" element={<Skills playHover={playHover} />} />
+        <Route path="/experience" element={<Experience playHover={playHover} />} />
+        <Route path="/config" element={<Config playHover={playHover} />} />
      </Routes>
     </>
   )

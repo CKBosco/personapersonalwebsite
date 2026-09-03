@@ -3,14 +3,14 @@ import styles from './Menu.module.css';
 import { useTransitionNavigate } from '../Transition/useTransitionNavigate';
 import menu from '../assets/Menu.mp4';
 import hoverSound from '../assets/MenuHover.wav';
-export default function MainMenu() {
+export default function MainMenu({ playHover }) {
     // const navigate = useNavigate();
     const navigate = useTransitionNavigate();
-    const playHover = () => {
-        const sound = new Audio(hoverSound);
-        sound.volume = 0.2;
-        sound.play().catch(() => {});
-    };
+    // const playHover = () => {
+    //     const sound = new Audio(hoverSound);
+    //     sound.volume = 0.2;
+    //     sound.play().catch(() => {});
+    // };
     const options = [
         { name: "PROFILE", className: styles.profile },
         { name: "EDUCATION", className: styles.education },

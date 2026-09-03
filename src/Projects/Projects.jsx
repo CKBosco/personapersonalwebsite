@@ -7,13 +7,13 @@ import hoverSound from '../assets/MenuHover.wav';
 import ProjectDetail from './ProjectDetail';
 import { projects } from './ProjectList';
 
-export default function Projects() {
+export default function Projects({ playHover }) {
     const navigate = useTransitionNavigate();
-    const playHover = () => {
-        const sound = new Audio(hoverSound);
-        sound.volume = 0.2;
-        sound.play().catch(() => {});
-    };
+    // const playHover = () => {
+    //     const sound = new Audio(hoverSound);
+    //     sound.volume = 0.2;
+    //     sound.play().catch(() => {});
+    // };
     const [selectedProject, setSelectedProject] = useState(null);
     return (
             <div className={styles.mainContainer}>

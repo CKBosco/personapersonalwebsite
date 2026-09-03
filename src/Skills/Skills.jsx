@@ -3,13 +3,13 @@ import styles from './Skills.module.css';
 import { useTransitionNavigate } from '../Transition/useTransitionNavigate';
 import skillVd from '../assets/skills.mp4';
 import hoverSound from '../assets/MenuHover.wav';
-export default function Skills() {
+export default function Skills({ playHover }) {
     const navigate = useTransitionNavigate();
-    const playHover = () => {
-        const sound = new Audio(hoverSound);
-        sound.volume = 0.2;
-        sound.play().catch(() => {});
-    };
+    // const playHover = () => {
+    //     const sound = new Audio(hoverSound);
+    //     sound.volume = 0.2;
+    //     sound.play().catch(() => {});
+    // };
     return (
         <div className={styles.mainContainer}>
             <video

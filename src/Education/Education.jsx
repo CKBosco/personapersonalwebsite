@@ -4,13 +4,13 @@ import styles from './Education.module.css';
 import { useTransitionNavigate } from '../Transition/useTransitionNavigate';
 import eduVd from '../assets/questM.mp4';
 import hoverSound from '../assets/MenuHover.wav';
-export default function Education() {
+export default function Education({ playHover }) {
     const navigate = useTransitionNavigate();
-    const playHover = () => {
-        const sound = new Audio(hoverSound);
-        sound.volume = 0.2;
-        sound.play().catch(() => {});
-    };
+    // const playHover = () => {
+    //     const sound = new Audio(hoverSound);
+    //     sound.volume = 0.2;
+    //     sound.play().catch(() => {});
+    // };
     const uniDetails = {
         degree: "BSc Computer Science and Artificial Intelligence",
         date: "2024 - Present",

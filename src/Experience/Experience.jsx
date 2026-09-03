@@ -3,13 +3,13 @@ import styles from './Experience.module.css';
 import { useTransitionNavigate } from '../Transition/useTransitionNavigate';
 import expVd from '../assets/itemsM.mp4';
 import hoverSound from '../assets/MenuHover.wav';
-export default function Experience() {
+export default function Experience({ playHover }) {
     const navigate = useTransitionNavigate();
-    const playHover = () => {
-        const sound = new Audio(hoverSound);
-        sound.volume = 0.2;
-        sound.play().catch(() => {});
-    };
+    // const playHover = () => {
+    //     const sound = new Audio(hoverSound);
+    //     sound.volume = 0.2;
+    //     sound.play().catch(() => {});
+    // };
     return (
         <div className={styles.mainContainer}>
             <video
