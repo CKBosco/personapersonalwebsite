@@ -6,25 +6,27 @@ export default function ProjectDetail({ selectedProject, setSelectedProject, pro
         if (!selectedProject || !projects || projects.length === 0) return;
 
         const handleKeyDown = (event) => {
-        const key = event.key.toLowerCase();
-        const currentIndex = projects.findIndex((p) => p.id === selectedProject.id);
+            // Extract the key pressed and normalize to lowercase
+            const key = event.key.toLowerCase(); 
 
-        if (currentIndex === -1) return;
+            const currentIndex = projects.findIndex(p => p.id === selectedProject.id);
+            if (currentIndex === -1) return;
 
-        if (key === 'escape') {
-            setSelectedProject(null);
-        } else if (key === 'e') {
-            const nextIndex = (currentIndex + 1) % projects.length;
-            setSelectedProject(projects[nextIndex]);
-        } else if (key === 'q') {
-            const prevIndex = (currentIndex - 1 + projects.length) % projects.length;
-            setSelectedProject(projects[prevIndex]);
-        }
+            if (key === 'escape') {
+                setSelectedProject(null);
+            } else if (key === 'e') {
+                const nextIndex = (currentIndex + 1) % projects.length;
+                setSelectedProject(projects[nextIndex]);
+            } else if (key === 'q') {
+                const prevIndex = (currentIndex - 1 + projects.length) % projects.length;
+                setSelectedProject(projects[prevIndex]);
+            }
         };
 
         window.addEventListener('keydown', handleKeyDown);
         return () => window.removeEventListener('keydown', handleKeyDown);
     }, [selectedProject, setSelectedProject, projects]);
+
         return (
             <div className={styles.pdDim} onClick={() => setSelectedProject(null)} >
             <div className={styles.mainContainer} onClick={(e) => e.stopPropagation()}>
