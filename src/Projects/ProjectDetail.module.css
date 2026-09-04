@@ -65,7 +65,7 @@
     color: white;
     display: flex;
     flex-direction: row;
-    gap: 150px;
+    gap: 100px;
     height: 11vh;
     position: relative;
     margin-top: 30px;
@@ -75,33 +75,34 @@
     font-family: 'Open Sans', sans-serif;
     font-weight: 500;
     font-size: 2rem;
-    margin-left: 25vw;
-    margin-top: 1vh;
-    width: 20vw;
+    margin-left: 24vw;
+    margin-top: 0.8vh;
+    width: 25vw;
 }
 
 .toolDateContainer{
     font-family: 'Rubik', sans-serif;
-    margin-top: 1vh;
+    margin-top: 0.8vh;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 6px;
 }
 .tools{
     font-weight: 400;
-    font-size: 2rem;
+    font-size: 1.6rem;
+    width: 20vw;
 }
 
 .date{
     font-weight: 400;
-    font-size: 1.7rem;
+    font-size: 1.2rem;
 }
 
 .details{
     font-family: 'Rubik', sans-serif;
     font-weight: 400;
     font-size: 1.5rem;
-    margin-left: 25vw;
+    margin-left: 24vw;
     margin-top: 2vh;
     width: 30vw;
 }
