@@ -23,6 +23,51 @@
     
 }
 
+.dimOpening {
+    animation: dimFadeIn 0.35s ease both;
+}
+.dimClosing {
+    animation: dimFadeOut 0.35s ease both;
+}
+@keyframes dimFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes dimFadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.containerOpening {
+    animation: containerSlideIn 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) both;
+}
+.containerClosing {
+    animation: containerSlideOut 0.35s cubic-bezier(0.4, 0, 1, 1) both;
+}
+@keyframes containerSlideIn {
+    from { transform: rotate(-7deg) skewX(-12deg) translateX(-150%); opacity: 0; }
+    to   { transform: rotate(-7deg) skewX(-12deg) translateX(0);     opacity: 1; }
+}
+@keyframes containerSlideOut {
+    from { transform: rotate(-7deg) skewX(-12deg) translateX(0);     opacity: 1; }
+    to   { transform: rotate(-7deg) skewX(-12deg) translateX(-150%); opacity: 0; }
+}
+
+.imageContainerOpening {
+    animation: imageContainerSlideIn 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) both;
+}
+.imageContainerClosing {
+    animation: imageContainerSlideOut 0.35s cubic-bezier(0.4, 0, 1, 1) both;
+}
+@keyframes imageContainerSlideIn {
+    from { transform: translateX(100%); opacity: 0; }
+    to   { transform: translateX(0);    opacity: 1; }
+}
+@keyframes imageContainerSlideOut {
+    from { transform: translateX(0);    opacity: 1; }
+    to   { transform: translateX(100%); opacity: 0; }
+}
+
 .pdContainer {
     background-color: white;
     height: 55vh;
@@ -40,16 +85,58 @@
     border-color: #ff0055;
 }
 
+.contentInner {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.imageInner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.slideInRight {
+    animation: slideInRight 0.45s cubic-bezier(0.25, 0.8, 0.25, 1) both;
+}
+
+.slideInLeft {
+    animation: slideInLeft 0.45s cubic-bezier(0.25, 0.8, 0.25, 1) both;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(120px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-120px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
 
 .projectId  {
     background-color: white;
     font-family: 'Anton', sans-serif;
     font-weight: 400;
     position: absolute;
-    font-size: 30rem;
     top: 0;
-    left: 0;
     left: 50px;
+    font-size: 30rem;
     height: 100%;
     padding: 20px;
     margin-left: 5vw;
@@ -58,6 +145,37 @@
     display: flex;
     align-items: center;
     
+}
+
+
+.idSlideInRight {
+    animation: idSlideInRight 0.45s cubic-bezier(0.25, 0.8, 0.25, 1) both;
+}
+
+.idSlideInLeft {
+    animation: idSlideInLeft 0.45s cubic-bezier(0.25, 0.8, 0.25, 1) both;
+}
+
+@keyframes idSlideInRight {
+    from {
+        transform: translateX(120px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes idSlideInLeft {
+    from {
+        transform: translateX(-120px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 .topContainer {
@@ -109,7 +227,7 @@
 
 .bottomLine{
     position: absolute;
-    bottom: 50px;
+    bottom: 35px;
     left: 0;
     width: 100%;
     height: 5vh;
