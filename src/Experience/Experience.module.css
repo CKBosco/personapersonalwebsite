@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 .mainContainer {
     position: relative;
     height: 100vh;
@@ -77,3 +77,228 @@
 
 .back:hover .textElement { color: #000000; }
 .back:hover { z-index: 10; }
+
+.expContainer {
+    position: absolute;
+    top: 25vh;
+    left: 3.5vw;
+    width: 35vw;
+    height: 60vh;
+    /* background-color: green; */
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-top: 20px;
+    padding-left: 0;
+    padding-right: 25px;
+    box-sizing: border-box;
+    gap: 20px;
+}
+
+.expCard{
+    position: relative;
+    width: 95%;
+    height: 100px;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1;
+    margin-left: 20px;
+    margin-bottom: 15px;
+    transform: skewX(-10deg);
+    border: 2px solid #373737;
+    box-shadow: -5px 5px 0px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1),
+                background-color 0.2s ease,
+                border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.expImageContainer,
+.expTitleCompanyContainer {
+    transform: skewX(10deg);
+}
+
+.expImageContainer{
+    width: auto;
+    height: 100%;
+    overflow: hidden;
+    transform: skewX(-1deg);
+}
+
+.expImage{
+    width: auto;
+    height: 200%;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.expTitleCompanyContainer{
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 95px);
+    padding-right: 15px;
+}
+
+.expTitle{
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.line{
+    height: 3px;
+    width: 100%;
+    background-color: #525252;
+    transition: transform 0.2s ease;
+    transform-origin: left;
+}
+
+.expCompany{
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: 2px;
+}
+
+.expTime{
+position: absolute;
+    bottom: 8px;
+    right: 15px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #888888;
+    text-transform: uppercase;
+    transition: color 0.2s ease;
+}
+
+
+.expCard:hover {
+    transform: skewX(-10deg) translate(8px, -4px);
+    background-color: #12c7ff;
+    border-color: #ffffff;
+    box-shadow: -8px 8px 0px #ff0055;
+    z-index: 10;
+}
+
+.expCard:hover .expTitle,
+.expCard:hover .expCompany,
+.expCard:hover .expTime {
+    color: #000000;
+}
+
+.expCard:hover .line {
+    background-color: #000000;
+    transform: scaleX(1.02);
+}
+
+.expCard:hover .expImage {
+    transform: scale(1.15) translateX(12px);
+}
+
+
+.expDetailContainer {
+    position: absolute;
+    top: 25vh;
+    right: 2.5vw;
+    width: 29vw;
+    height: 60vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.expDetailWrapper {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(20, 20, 20, 0.9);
+    border: 3px solid #12c7ff;
+    box-shadow: -10px 10px 0px #ff0055;
+    transform: skewX(-6deg);
+    padding: 30px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.detailHeader,
+.detailBadgeRow,
+.detailDivider,
+.expDetail,
+.placeholderState {
+    transform: skewX(6deg);
+}
+
+.detailHeader {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.detailTitle {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+}
+
+.detailCompany {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #12c7ff;
+    margin-top: 4px;
+}
+
+.detailBadgeRow {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.detailTimeBadge {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: #000000;
+    background-color: #ffffff;
+    padding: 3px 10px;
+    text-transform: uppercase;
+    clip-path: polygon(0 0, 100% 0, 92% 100%, 0% 100%);
+}
+
+.detailDivider {
+    height: 3px;
+    width: 100%;
+    background-color: #ff0055;
+    margin-bottom: 20px;
+}
+
+.expDetail {
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #e0e0e0;
+}
+
+.placeholderState {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(26, 26, 26, 0.7);
+    border: 2px dashed #373737;
+    transform: skewX(-6deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #525252;
+    letter-spacing: 1px;
+}
