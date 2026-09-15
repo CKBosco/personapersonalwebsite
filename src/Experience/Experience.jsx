@@ -3,7 +3,7 @@ import styles from './Experience.module.css';
 import { useTransitionNavigate } from '../Transition/useTransitionNavigate';
 import expVd from '../assets/itemsM.mp4';
 import hoverSound from '../assets/MenuHover.wav';
-import mitsuru from '../assets/expCharacters/mitsuru.png';
+import { exps } from './ExpList';
 export default function Experience({ playHover }) {
     const navigate = useTransitionNavigate();
     // const playHover = () => {
@@ -12,16 +12,6 @@ export default function Experience({ playHover }) {
     //     sound.play().catch(() => {});
     // };
     const [selectedExp, setSelectedExp] = useState(null);
-    const exps = [
-        {
-            id: 1,
-            title: "Experience 1",
-            company: "Company 1",
-            time: "Jan 2020 - Present",
-            description: "Description for Experience 1",
-            image: mitsuru
-        }
-    ]
     return (
         <div className={styles.mainContainer}>
             <video
