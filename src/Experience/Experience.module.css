@@ -82,7 +82,7 @@
     position: absolute;
     top: 25vh;
     left: 3.5vw;
-    width: 35vw;
+    width: 40vw;
     height: 60vh;
     /* background-color: green; */
     overflow-y: auto;
@@ -143,7 +143,7 @@
 }
 
 .expTitle{
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 600;
     margin-bottom: 5px;
     font-weight: 600;
@@ -276,7 +276,7 @@ position: absolute;
     height: 3px;
     width: 100%;
     background-color: #ff0055;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .expDetail {
@@ -285,6 +285,8 @@ position: absolute;
     font-weight: 400;
     line-height: 1.6;
     color: #e0e0e0;
+    white-space: pre-line;
+    padding-left: 15px;
 }
 
 .placeholderState {

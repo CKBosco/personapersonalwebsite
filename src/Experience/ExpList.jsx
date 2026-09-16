@@ -2,13 +2,13 @@ import mitsuru from '../assets/expCharacters/mitsuru.png';
 import yukari from '../assets/expCharacters/yukari.png';
 import fuuka from '../assets/expCharacters/fuuka.png';
 import aigis from '../assets/expCharacters/aigis.png';
-export const exp = [
+export const exps = [
     {
         id: 1,
         title: "Temporary Programme Executive",
         company: "Hong Kong Red Cross",
         time: "Jul 2026 - Sep 2026",
-        description: "Helped establish a new community hub for residents affected by the Wang Fuk Court fire. Key responsibilities included developing operational workflows, creating promotional materials, delivering frontline visitor support, and leading mobile app training workshops for service users. Proactively suggested program improvements while collaborating closely with the team to ensure smooth, empathetic service delivery.                    *Reference available upon request/",
+        description: "Helped establish a new community hub for residents affected by the Wang Fuk Court fire. Key responsibilities included developing operational workflows, creating promotional materials, delivering frontline visitor support, and leading activities such as mobile training workshops for service users. Proactively suggested program improvements while collaborating closely with the team to ensure smooth, empathetic service delivery.\n*Reference available upon request",
         image: mitsuru
     },
     {
