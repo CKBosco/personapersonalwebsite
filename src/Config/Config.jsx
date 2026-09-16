@@ -3,7 +3,7 @@ import styles from './Config.module.css';
 import { useTransitionNavigate } from '../Transition/useTransitionNavigate';
 import config from '../assets/Config.mp4';
 import hoverSound from '../assets/MenuHover.wav';
-export default function Config({ playHover }) {
+export default function Config({ soundOn, setSoundOn, playHover }) {
     const navigate = useTransitionNavigate();
     // const playHover = () => {
     //     const sound = new Audio(hoverSound);
@@ -17,11 +17,27 @@ export default function Config({ playHover }) {
                 src= {config} 
                 autoPlay loop muted playsInline 
             />
+            
             <div className={styles.back}
             onMouseEnter={playHover}
             onClick={() => navigate("/")}
             >
                 <span className={styles.textElement}>BACK</span>
+            </div>
+
+            
+            <div className={styles.settingContainer}>
+                <div className={styles.settingRow}>
+                    <div className={styles.settingLabel}>SFX Audio</div>
+                    <div className={styles.toggleContainer} onClick={() => setSoundOn(!soundOn)} onMouseEnter={playHover} >
+                        <button className={`${styles.toggleBtn} ${soundOn ? styles.active : ''}`}>
+                            ON
+                        </button>
+                        <button className={`${styles.toggleBtn} ${!soundOn ? styles.active : ''}`}>
+                            OFF
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     )

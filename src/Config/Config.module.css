@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 .mainContainer {
     position: relative;
     height: 100vh;
@@ -9,6 +9,7 @@
     overflow: hidden;
     justify-content: flex-start;
     align-items: flex-start;
+    user-select: none;
 }
 
 .videoBg {
@@ -19,6 +20,67 @@
     height: 100%;
     object-fit: cover;
     z-index: -1;
+}
+
+
+.settingContainer {
+    position: absolute;
+    top: 20vh;
+    left: 3.5vw;
+    width: 40vw;
+    height: 60vh;
+    display: flex;
+    /* align-items: center; */
+    /* background-color: red; */
+}
+
+.settingRow {
+    font-family: 'Rubik', sans-serif;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    /* background-color: green; */
+    height: 45px;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.settingLabel {
+    font-weight: 500;
+    font-size: 2rem;
+    color: #00e5ff;
+}
+
+.toggleContainer {
+    display: flex;
+    background-color: #050618;
+    border-radius: 20px;
+    width: 300px;
+    height: 40px;
+    padding: 2px;
+    cursor: pointer;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.8);
+}
+
+.toggleBtn {
+    flex: 1;
+    border: none;
+    background: transparent;
+    color: #5b6275;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 4px 24px;
+    border-radius: 18px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.toggleBtn.active {
+    background-color: #ffffff;
+    color: #000000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .back{

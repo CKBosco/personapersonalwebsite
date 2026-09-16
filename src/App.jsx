@@ -10,12 +10,15 @@ import Projects from './Projects/Projects.jsx';
 import Experience from './Experience/Experience.jsx';
 import Config from './Config/Config.jsx';
 import hoverSound from './assets/MenuHover.wav';
-const playHover = () => {
-    const sound = new Audio(hoverSound);
-    sound.volume = 0.2;
-    sound.play().catch(() => {});
-};
+
 function App() {
+  const [soundOn, setSoundOn] = useState(true);
+  const playHover = () => {
+      if (!soundOn) return;
+      const sound = new Audio(hoverSound);
+      sound.volume = 0.2;
+      sound.play().catch(() => {});
+  };
 
   return (
     <>
@@ -27,7 +30,7 @@ function App() {
         <Route path="/projects" element={<Projects playHover={playHover} />} />
         <Route path="/skills" element={<Skills playHover={playHover} />} />
         <Route path="/experience" element={<Experience playHover={playHover} />} />
-        <Route path="/config" element={<Config playHover={playHover} />} />
+        <Route path="/config" element={<Config soundOn={soundOn} setSoundOn={setSoundOn} playHover={playHover} />} />
      </Routes>
     </>
   )
