@@ -79,173 +79,135 @@
 .back:hover .textElement { color: #000000; }
 .back:hover { z-index: 10; }
 
-/* .tsContainer{
+.tsContainer {
     position: absolute;
-    top: 30vh;
-    left: 2vw;
-    width: 36vw;
-    height: 65vh;
-    text-align: center;
-}
-
-.tsTitle, .osTitle{
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 800;
-    letter-spacing: -4px;
-    font-size: 4rem;
-    transform: var(--base-transform);
-    --base-transform: skewX(-10deg) rotate(-2deg);
-    margin-top: 10px;
-}
-
-.tsTitle{
-	margin-bottom: 20px;
-    color: #162047;
-}
-.plTitle, .fTitle{
-    font-family: 'Rubik', sans-serif;
-    font-weight: 700;
-    font-size: 2.5rem;
-    transform: var(--base-transform);
-    --base-transform: skewX(5deg) rotate(2deg);
-    color: #162047;
-}
-
-.langList, .fList{
-    font-family: 'Rubik', sans-serif;
-    font-weight: 550;
-    font-size: 1.7rem;
-    white-space: pre-line;
-    padding: 40px;
-    transform: var(--base-transform);
-    --base-transform: skewX(-10deg);
-    color: #162047;
-}
-
-.osContainer{
-    position: absolute;
-    top: 5vh;
-    right: 2vw;
-    width: 30vw;
-    height: 65vh;
-    text-align: center;
-}
-
-.osTitle{
-    margin-bottom: -15px;
-    color: #12c7ff;
-}
-.osList{
-    font-family: 'Rubik', sans-serif;
-    font-weight: 700;
-    font-size: 2rem;
-    white-space: pre-line;
-    padding: 40px;
-    color: #54d1f7;
-    transform: var(--base-transform);
-    --base-transform: skewX(-5deg);
-} */
-
-.tsContainer{
-    position: absolute;
-    top: 30vh;
-    left: 2vw;
-    width: 36vw;
-    height: 65vh;
-    text-align: center;
+    top: 45vh;
+    left: 4vw;
+    width: 38vw;
+    padding: 30px 25px;
+    box-sizing: border-box;
+    filter: drop-shadow(-8px 12px 0px rgba(10, 20, 66, 0.85));
 }
 
 .tsContainer::before {
     content: '';
     position: absolute;
-    top: -4vh;
-    left: -3vw;
-    right: -1vw;
-    bottom: -2vh;
-    background: linear-gradient(115deg, #ffffff 0%, #ffffff 82%, #eef2ff 100%);
-    clip-path: polygon(4% 0%, 100% 0%, 96% 100%, 0% 96%);
-    border: 7px solid #12c7ff;
-    box-shadow: 10px 0 0 -3px #162047, 16px 0 0 -6px #12c7ff;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(225, 245, 255, 0.9) 100%);
+    clip-path: polygon(0 0, 100% 4%, 95% 96%, 3% 100%);
     z-index: -1;
-    opacity: 0.7;
+    border-left: 6px solid #00d2ff;
 }
 
-.tsTitle, .osTitle{
+.tsTitle {
     font-family: 'Open Sans', sans-serif;
     font-weight: 800;
-    letter-spacing: -4px;
-    font-size: 4rem;
-    transform: var(--base-transform);
-    --base-transform: skewX(-10deg) rotate(-2deg);
-    margin-top: 10px;
-    text-shadow: 3px 3px 0px rgba(18, 199, 255, 0.25);
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    color: #ffffff;
+    background: #0a1442;
+    display: inline-block;
+    padding: 6px 28px;
+    margin-bottom: 25px;
+    margin-left: 5px;
+    transform: skewX(-16deg) rotate(-1.5deg);
+    clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+    box-shadow: 5px 5px 0px #00d2ff;
+    letter-spacing: -1px;
 }
 
-.tsTitle{
-	margin-bottom: 20px;
-    color: #162047;
-    text-shadow: 3px 3px 0px rgba(255, 255, 255, 0.6);
+.plTitle, .fTitle {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: #0a1442;
+    position: relative;
+    display: table;
+    margin-top: 10px;
+    margin-bottom: 8px;
+    margin-left: 10px;
+    padding: 2px 14px;
+    background: #00d2ff;
+    transform: skewX(-12deg);
+    letter-spacing: 0.5px;
 }
-.plTitle, .fTitle{
+
+.plTitle::before, .fTitle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: 6px;
+    height: 100%;
+    background: #ff0055;
+}
+
+.langList, .fList {
     font-family: 'Rubik', sans-serif;
     font-weight: 700;
-    font-size: 2.5rem;
-    transform: var(--base-transform);
-    --base-transform: skewX(5deg) rotate(2deg);
-    color: #162047;
-}
-
-.langList, .fList{
-    font-family: 'Rubik', sans-serif;
-    font-weight: 550;
-    font-size: 1.7rem;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: #0d1a52;
     white-space: pre-line;
-    padding: 40px;
-    line-height: 1.7;
-    letter-spacing: 0.5px;
-    transform: var(--base-transform);
-    --base-transform: skewX(-10deg);
-    color: #162047;
+    padding: 8px 0 18px 12px;
+    margin-left: 10px;
+    transform: skewX(-4deg);
+    border-left: 3px solid rgba(10, 20, 66, 0.2);
+    letter-spacing: 0.2px;
 }
 
-.osContainer{
+.osContainer {
     position: absolute;
-    top: 5vh;
-    right: 3.5vw;
-    width: 30vw;
-    height: 77vh;
-    text-align: center;
+    top: 8vh;
+    right: 4vw;
+    width: 28vw;
+    padding: 30px 25px;
+    box-sizing: border-box;
+    filter: drop-shadow(10px 14px 0px rgba(0, 210, 255, 0.3));
 }
 
 .osContainer::before {
     content: '';
     position: absolute;
-    top: -3vh;
-    left: -2vw;
-    right: -3vw;
-    bottom: -3vh;
-    background: linear-gradient(115deg, #0a1442 0%, #162047 45%, #0d1a52 100%);
-    clip-path: polygon(0% 0%, 96% 4%, 100% 100%, 4% 96%);
-    border: 7px solid #12c7ff;
-    box-shadow: -10px 0 0 -3px #12c7ff, -16px 0 0 -6px #ffffff;
+    inset: 0;
+    background: linear-gradient(160deg, #0a1442 0%, #10246e 70%, #060d2e 100%);
+    clip-path: polygon(5% 0, 100% 3%, 94% 98%, 0 95%);
     z-index: -1;
-    opacity: 0.7;
+    border-right: 5px solid #ff0055;
 }
 
-.osTitle{
-    margin-bottom: -25px;
-    color: #12c7ff;
+.osTitle {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    font-size: 2.6rem;
+    text-transform: uppercase;
+    color: #0a1442;
+    background: #ffffff;
+    display: inline-block;
+    padding: 4px 22px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+    transform: skewX(-18deg) rotate(1deg);
+    clip-path: polygon(0% 0%, 96% 0%, 100% 100%, 4% 100%);
+    box-shadow: -4px 4px 0px #ff0055;
+    letter-spacing: -1px;
 }
 
-.osList{
+.osList {
     font-family: 'Rubik', sans-serif;
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 1.15rem;
+    line-height: 1.85;
+    color: #ffffff;
     white-space: pre-line;
-    padding: 30px;
-    margin-left:15px;
-    line-height: 1.6;
-    color: #54d1f7;
-    transform: var(--base-transform);
-    --base-transform: skewX(-5deg);
+    padding: 10px 10px 10px 15px;
+    margin-left: 5px;
+    transform: skewX(-6deg);
+    text-shadow: 2px 2px 0px #000000;
+    letter-spacing: 0.5px;
+}
+
+.osList::first-line {
+    color: #00d2ff;
 }

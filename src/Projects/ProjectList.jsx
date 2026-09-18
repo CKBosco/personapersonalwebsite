@@ -30,7 +30,7 @@ export const projects = [
     },
     {
         id: 2,
-        name: "Data analysis and text-chat subsystem",
+        name: "Data-analysis and text-chat subsystem",
         tools: "Laravel, React, Git, Google Cloud Platform",
         date: "Feb 2026 - May 2026",
         details: "Team project on data analysis and text-chat subsystem for a project management web application, developed using Laravel in backend and React in frontend, with version control managed through Git. System includes data analysis and visualization using Chart.js, and a text-chat system for users to communicate with others in real-time. While hosting the website on Google Cloud Platform.",
