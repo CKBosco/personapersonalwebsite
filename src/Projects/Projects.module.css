@@ -182,5 +182,86 @@
     margin-top: 40px;
 }
 
+@media (max-width: 1200px) {
+    .projectsContainer {
+        width: 60vw;
+        left: 3vw;
+    }
+
+    .back {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .mainContainer {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 50px;
+    }
+
+    .projectsContainer {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 90vw;
+        height: auto;
+        max-height: 60vh;
+        margin: 100px auto 0 auto;
+        align-self: center;
+        padding-right: 0;
+    }
+
+    * {
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+        width: 0;
+        height: 0;
+    }
+
+    .projectName {
+        margin-left: 5px;
+    }
+
+    .projectCard {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .back {
+        margin-top: 20px;
+        margin-left: 20px;
+        align-self: flex-start;
+    }
+}
+
+@media (max-width: 600px) {
+    .back {
+        font-size: 2.5rem;
+        letter-spacing: -2px;
+        padding: 0 20px;
+        margin-top: 15px;
+    }
+
+    .projectCard {
+        width: 100%;
+        margin-left: 0;
+        height: 70px;
+    }
+
+    .projectName {
+        font-size: 1.1rem;
+    }
+
+    .projectDate {
+        font-size: 0.9rem;
+        margin-right: 15px;
+        margin-top: 25px;
+    }
+}
 
 

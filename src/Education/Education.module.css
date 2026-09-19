@@ -26,12 +26,8 @@
     left: 8vw;
     width: 58vw;
     height: 70vh;
-    /* background-color: #162047; */
     display: flex;
     flex-direction: column;
-    /* opacity: 90%; */
-    /* box-sizing: border-box;
-    overflow: hidden; */
 }
 
 .statusBar{
@@ -140,18 +136,17 @@
     border-radius: 7px;
     letter-spacing: -3px;
     user-select: none;
+    margin-right: 20px;
 }
 
 .inProgress{
     background-color: #66fcfb;
-    margin-right: 20px;
     padding: 0 25px 2px 25px;
     color: #000356;
 }
 
 .completed{
     background-color: #020c72;
-    margin-right: 20px;
     padding: 0 53px 0 53px;
     border: 2px solid #9b9c93;
     color: #9b9c93;
@@ -267,3 +262,103 @@
 
 .back:hover .textElement { color: #000000; }
 .back:hover { z-index: 10; }
+
+@media (max-width: 1200px) {
+    .educationContainer {
+        width: 80vw;
+        left: 5vw;
+    }
+    
+    .back {
+        font-size: 3.5rem;
+    }
+
+    .school {
+        font-size: 1.5rem;
+    }
+
+    .degree {
+        font-size: 1.5rem;
+    }
+
+    .details {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .mainContainer {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-bottom: 50px;
+    }
+
+    .educationContainer {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 90vw;
+        height: auto;
+        margin: 20px auto 0 auto;
+    }
+
+    .schoolStatus{
+        margin-left: 100px;
+    }
+    .status{
+        margin-right: 50px;
+    }
+
+    .inProgress,
+    .completed {
+        width: 125px;
+        text-align: center;
+        letter-spacing: -1px;
+    }
+
+    .back {
+        margin-top: 20px;
+        margin-left: 0;
+        align-self: flex-start;
+    }
+
+    .school {
+        margin-left: 5px;
+    }
+
+    .degree {
+        margin-left: 5px;
+    }
+
+    .details {
+        margin-left: 5px;
+    }
+}
+
+@media (max-width: 600px) {
+    .back {
+        font-size: 2.5rem;
+        letter-spacing: -2px;
+        padding: 0 20px;
+        margin-top: 15px;
+    }
+
+    .schoolContainer {
+        padding: 8px;
+    }
+
+    .school {
+        font-size: 1.2rem;
+    }
+
+    .inProgress, .completed {
+        font-size: 1rem;
+        padding: 2px 10px;
+    }
+
+    .degreeDateContainer {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+}

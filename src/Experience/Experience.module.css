@@ -12,13 +12,14 @@
 }
 
 .videoBg {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     object-fit: cover;
     z-index: -1;
+    pointer-events: none;
 }
 
 .back{
@@ -224,6 +225,17 @@ position: absolute;
     overflow-y: auto;
 }
 
+.expContainer,.expDetailWrapper {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.expContainer::-webkit-scrollbar,.expDetailWrapper::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
 .detailHeader,
 .detailBadgeRow,
 .detailDivider,
@@ -303,4 +315,123 @@ position: absolute;
     font-weight: 800;
     color: #525252;
     letter-spacing: 1px;
+}
+
+@media (max-width: 1500px) {
+    .expContainer {
+        width: 55vw;
+        left: 2vw;
+    }
+}
+
+@media (max-width: 1200px) {
+    .expContainer {
+        width: 48vw;
+        left: 2vw;
+    }
+
+    .expDetailContainer {
+        width: 42vw;
+        right: 2vw;
+    }
+
+    .back {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 950px) {
+    .mainContainer {
+        height: auto;
+        min-height: 100vh;
+        overflow-x: hidden;
+        overflow-y: visible;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 50px;
+    }
+
+    * {
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+        width: 0;
+        height: 0;
+    }
+
+    .back {
+        margin-top: 20px;
+        margin-left: 20px;
+        align-self: flex-start;
+    }
+
+    .expContainer {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 90vw;
+        height: auto;
+        max-height: 50vh;
+        margin: 20px auto 0 auto;
+        align-self: center;
+        padding-right: 0;
+    }
+
+    .expCard {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .expDetailContainer {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: 90vw;
+        height: auto;
+        min-height: 300px;
+        margin: 30px auto 0 auto;
+        align-self: center;
+    }
+
+    .expDetailWrapper,
+    .placeholderState {
+        height: auto;
+        min-height: 250px;
+    }
+}
+
+@media (max-width: 600px) {
+    .back {
+        font-size: 2.5rem;
+        letter-spacing: -2px;
+        padding: 0 20px;
+        margin-top: 15px;
+    }
+
+    .expTitle {
+        font-size: 1.3rem;
+    }
+
+    .expTime {
+        display: none;
+    }
+
+    .expCompany {
+        font-size: 1.1rem;
+    }
+
+    .detailTitle {
+        font-size: 1.6rem;
+    }
+
+    .detailCompany {
+        font-size: 1.1rem;
+    }
+
+    .expDetail {
+        font-size: 0.95rem;
+    }
 }

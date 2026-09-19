@@ -128,7 +128,6 @@
 
 .education {
     --base-transform: skewX(-14deg) rotate(-9deg);
-    /* margin-left: 50px; */
     margin-left: 20px;
     margin-bottom: -50px;
     color: #0bccfe;
@@ -144,7 +143,6 @@
 
 .skills {
     --base-transform: skewX(-14deg) rotate(-16deg);
-    /* margin-bottom: -32px; */
     margin-bottom: 10px;
     margin-left: 20px;
     z-index: 2;
@@ -215,4 +213,57 @@
 
 .menuOption:hover .textElement {
     color: #000000;
+}
+
+@media (max-width: 1024px) {
+    .cornerTrapezoid {
+        width: 400px;
+        height: 130px;
+    }
+    .name {
+        font-size: 2.2rem;
+        padding-right: 40px;
+    }
+    .email, .phone {
+        font-size: 0.85rem;
+        padding-right: 60px;
+    }
+    .menuOption {
+        font-size: 3.2rem;
+        letter-spacing: -3px;
+        padding: 0 35px;
+    }
+}
+
+@media (max-width: 768px) {
+    .optionsContainer {
+        margin-top: 10px;
+        padding: 10px;
+    }
+    .menuOption {
+        letter-spacing: -2px;
+        padding: 0 20px;
+    }
+    .profile, .education, .equip, .skills, .projects, .experience, .config {
+        margin-bottom: -2px;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .name {
+        font-size: 1.2rem;
+        padding-right: 20px;
+    }
+    .email, .phone {
+        font-size: 0.55rem;
+        padding-right: 25px;
+    }
+    .menuOption {
+        letter-spacing: -1px;
+        padding: 0 12px;
+    }
+    .profile, .education, .equip, .skills, .projects, .experience, .config {
+        margin-bottom: -5px;
+    }
 }

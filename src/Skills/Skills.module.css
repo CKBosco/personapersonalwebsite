@@ -13,13 +13,14 @@
 }
 
 .videoBg {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     object-fit: cover;
     z-index: -1;
+    pointer-events: none;
 }
 
 .back{
@@ -208,6 +209,101 @@
     letter-spacing: 0.5px;
 }
 
-.osList::first-line {
-    color: #00d2ff;
+@media (max-width: 1200px) {
+    .tsContainer {
+        width: 44vw;
+    }
+
+    .osContainer {
+        width: 34vw;
+    }
+
+    .tsTitle {
+        font-size: 2.2rem;
+    }
+
+    .osTitle {
+        font-size: 2.1rem;
+    }
+
+    .back {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 900px) {
+    html, body {
+        overflow-y: auto;
+        height: auto;
+    }
+    .mainContainer {
+        height: auto;
+        overflow-x: hidden;
+        overflow-y: visible;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 50px;
+    }
+    * {
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+        width: 0;
+        height: 0;
+    }
+
+    .tsContainer,
+    .osContainer {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        width: 88vw;
+        max-width: 600px;
+        margin: 20px auto 0 auto;
+    }
+
+    .back {
+        margin-top: 20px;
+        margin-left: 0;
+        align-self: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .back {
+        font-size: 2.2rem;
+        letter-spacing: -2px;
+        padding: 0 20px;
+        margin-top: 15px;
+    }
+
+    .tsContainer,
+    .osContainer {
+        width: 92vw;
+        padding: 20px 15px;
+    }
+
+    .tsTitle,
+    .osTitle {
+        font-size: 1.5rem;
+        padding: 4px 14px;
+    }
+
+    .plTitle,
+    .fTitle {
+        font-size: 1.1rem;
+        padding: 2px 8px;
+    }
+
+    .langList,
+    .fList,
+    .osList {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        padding-left: 8px;
+    }
 }

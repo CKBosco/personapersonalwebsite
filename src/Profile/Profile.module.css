@@ -142,3 +142,63 @@
 
 .back:hover .textElement { color: #000000; }
 .back:hover { z-index: 10; }
+
+@media (max-width: 1024px) {
+    .infoContainer {
+        width: 60vw;
+        left: 4vw;
+        top: 20vh;
+        height: 65vh;
+    }
+    .info {
+        font-size: 1.15rem;
+        padding: 20px 115px 30px 25px;
+    }
+    .back {
+        margin-top: 20px;
+        margin-left: 0;
+        align-self: flex-start;
+    }
+}
+
+@media (max-width: 768px) {
+    .infoContainer {
+        width: 80vw;
+        left: 3vw;
+        height: 60vh;
+        clip-path: polygon(0 0, 100% 0, 92% 92%, 88% 100%, 0 100%);
+        transform: rotate(-1deg) skewX(-2deg);
+    }
+    .infoContainer:hover {
+        transform: rotate(-0.5deg) skewX(-1deg) scale(1.005);
+    }
+    .info {
+        font-size: 1rem;
+        line-height: 1.5;
+        padding: 25px 60px 25px 20px;
+        margin-right: 10px;
+        transform: skewX(2deg) rotate(1deg);
+    }
+}
+
+@media (max-width: 480px) {
+    .infoContainer {
+        width: 90vw;
+        left: 2vw;
+        height: 65vh;
+        clip-path: polygon(0 0, 100% 0, 95% 95%, 92% 100%, 0 100%);
+        border-left-width: 4px;
+    }
+    .info {
+        font-size: 0.8rem;
+        line-height: 1.45;
+        padding: 20px 25px 20px 15px;
+        letter-spacing: -0.2px;
+    }
+    .back {
+        font-size: 2.2rem;
+        letter-spacing: -2px;
+        padding: 0 20px;
+        margin-top: 15px;
+    }
+}
