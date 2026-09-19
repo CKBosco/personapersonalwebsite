@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import styles from './Experience.module.css';
 import { useTransitionNavigate } from '../Transition/useTransitionNavigate';
-import expVd from '../assets/itemsM.mp4';
+import expVd from '../assets/itemsMV2.mp4';
 import hoverSound from '../assets/MenuHover.wav';
 import { exps } from './ExpList';
 export default function Experience({ playHover }) {

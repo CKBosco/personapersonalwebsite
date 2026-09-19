@@ -2,7 +2,7 @@ import { useNavigate } from "react-router";
 import { useState } from "react";
 import styles from './Projects.module.css';
 import { useTransitionNavigate } from '../Transition/useTransitionNavigate';
-import ProjVd from '../assets/skillsM.mp4';
+import ProjVd from '../assets/skillsMV2.mp4';
 import hoverSound from '../assets/MenuHover.wav';
 import ProjectDetail from './ProjectDetail';
 import { projects } from './ProjectList';

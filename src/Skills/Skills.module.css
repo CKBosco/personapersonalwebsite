@@ -175,7 +175,6 @@
     background: linear-gradient(160deg, #0a1442 0%, #10246e 70%, #060d2e 100%);
     clip-path: polygon(5% 0, 100% 3%, 94% 98%, 0 95%);
     z-index: -1;
-    border-right: 5px solid #ff0055;
 }
 
 .osTitle {

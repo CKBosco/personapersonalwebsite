@@ -2,7 +2,7 @@ import { useNavigate } from "react-router";
 import { useState } from "react";
 import styles from './Education.module.css';
 import { useTransitionNavigate } from '../Transition/useTransitionNavigate';
-import eduVd from '../assets/questM.mp4';
+import eduVd from '../assets/questMV2.mp4';
 import hoverSound from '../assets/MenuHover.wav';
 export default function Education({ playHover }) {
     const navigate = useTransitionNavigate();

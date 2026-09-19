@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router";
 import styles from './Skills.module.css';
 import { useTransitionNavigate } from '../Transition/useTransitionNavigate';
-import skillVd from '../assets/skills.mp4';
+import skillVd from '../assets/skillsV2.mp4';
 import hoverSound from '../assets/MenuHover.wav';
 export default function Skills({ playHover }) {
     const navigate = useTransitionNavigate();
