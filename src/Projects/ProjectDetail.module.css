@@ -23,6 +23,50 @@
     
 }
 
+.pdButtonContainer{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 200;
+    user-select: none;
+}
+
+.escContainer{
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.escButton{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    letter-spacing: -2px;
+    font-size: 1.75rem;
+    width: 60px;
+    height: 60px;
+    color: white;
+    background-color: #1D2434;
+    border: 3px solid white;
+    border-radius: 12%;
+    padding-top: 6px;
+    text-align: center;
+}
+
+.escText{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    letter-spacing: -1px;
+    font-size: 4rem;
+    color: #060bad;
+    -webkit-text-stroke: 1px white;
+}
+
+
 .dimOpening {
     animation: dimFadeIn 0.35s ease both;
 }
@@ -424,6 +468,18 @@
 }
 
 @media (max-width: 600px) {
+    .escButton{
+        display: none;
+    }
+    .escText{
+        color: white;
+        padding: 5px;
+        font-size: 3rem;
+        background-color: #1D2434;
+        border: 3px solid white;
+        border-radius: 20px;
+        -webkit-text-stroke: 0;
+    }
     .projectName,
     .toolDateContainer,
     .details {

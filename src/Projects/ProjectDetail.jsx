@@ -3,11 +3,11 @@ import styles from './ProjectDetail.module.css';
 export default function ProjectDetail({ selectedProject, setSelectedProject, projects }) {
     
     const [direction, setDirection] = useState(0);
+
     useEffect(() => {
         if (!selectedProject || !projects || projects.length === 0) return;
 
         const handleKeyDown = (event) => {
-            // Extract the key pressed and normalize to lowercase
             const key = event.key.toLowerCase(); 
 
             const currentIndex = projects.findIndex(p => p.id === selectedProject.id);
@@ -46,6 +46,12 @@ export default function ProjectDetail({ selectedProject, setSelectedProject, pro
 
         return (
             <div className={styles.pdDim} onClick={() => setSelectedProject(null)} >
+            <div className={styles.pdButtonContainer}>
+                <div className={styles.escContainer} onClick={() => setSelectedProject(null)}>
+                    <div className={styles.escButton}>ESC</div>
+                    <div className={styles.escText}>CLOSE</div>
+                </div>
+            </div>
             <div className={styles.mainContainer} onClick={(e) => e.stopPropagation()}>
             <div className={styles.pdContainer}>
                 <div className={`${styles.projectId} ${idSlideClass}`} onAnimationEnd={() => setDirection(0)}>
