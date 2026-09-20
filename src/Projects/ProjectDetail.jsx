@@ -15,11 +15,11 @@ export default function ProjectDetail({ selectedProject, setSelectedProject, pro
 
             if (key === 'escape') {
                 setSelectedProject(null);
-            } else if (key === 'e') {
+            } else if (key === 'e' || key === 'arrowright') {
                 const nextIndex = (currentIndex + 1) % projects.length;
                 setDirection(1);
                 setSelectedProject(projects[nextIndex]);
-            } else if (key === 'q') {
+            } else if (key === 'q' || key === 'arrowleft') {
                 const prevIndex = (currentIndex - 1 + projects.length) % projects.length;
                 setDirection(-1);
                 setSelectedProject(projects[prevIndex]);
