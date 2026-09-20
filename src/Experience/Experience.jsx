@@ -2,23 +2,19 @@ import {useState} from 'react';
 import styles from './Experience.module.css';
 import { useTransitionNavigate } from '../Transition/useTransitionNavigate';
 import expVd from '../assets/itemsMV2.mp4';
-import hoverSound from '../assets/MenuHover.wav';
 import { exps } from './ExpList';
-export default function Experience({ playHover }) {
+export default function Experience({ playHover, videoOn }) {
     const navigate = useTransitionNavigate();
-    // const playHover = () => {
-    //     const sound = new Audio(hoverSound);
-    //     sound.volume = 0.2;
-    //     sound.play().catch(() => {});
-    // };
     const [selectedExp, setSelectedExp] = useState(null);
     return (
-        <div className={styles.mainContainer}>
-            <video
-                className={styles.videoBg}
-                src= {expVd} 
-                autoPlay loop muted playsInline 
-            />
+        <div className={`${styles.mainContainer} ${!videoOn ? styles.solidBg : ''}`}>
+            {videoOn && (
+                <video
+                    className={styles.videoBg}
+                    src={expVd} 
+                    autoPlay loop muted playsInline 
+                />
+            )}
             <div className={styles.back}
             onMouseEnter={playHover}
             onClick={() => navigate("/")}

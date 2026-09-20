@@ -20,6 +20,10 @@
     object-fit: cover;
     z-index: -1;
 }
+
+.solidBg {
+    background-color: #2780DC;
+}
     
 
 .infoContainer {
@@ -72,17 +76,9 @@
 }
 
 .info::-webkit-scrollbar {
-    width: 6px;
-}
-
-.info::-webkit-scrollbar-track {
-    background: rgba(8, 28, 64, 0.5);
-}
-
-.info::-webkit-scrollbar-thumb {
-    background: #00f0ff;
-    border-radius: 0px;
-    box-shadow: 0 0 8px #00f0ff;
+    display: none;
+    width: 0;
+    height: 0;
 }
 
 .back{

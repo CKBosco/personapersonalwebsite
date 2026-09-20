@@ -1,16 +1,8 @@
-import { useNavigate } from "react-router";
 import styles from './Menu.module.css';
 import { useTransitionNavigate } from '../Transition/useTransitionNavigate';
 import menu from '../assets/Menu.mp4';
-import hoverSound from '../assets/MenuHover.wav';
-export default function MainMenu({ playHover }) {
-    // const navigate = useNavigate();
+export default function MainMenu({ playHover, videoOn }) {
     const navigate = useTransitionNavigate();
-    // const playHover = () => {
-    //     const sound = new Audio(hoverSound);
-    //     sound.volume = 0.2;
-    //     sound.play().catch(() => {});
-    // };
     const options = [
         { name: "PROFILE", className: styles.profile },
         { name: "EDUCATION", className: styles.education },
@@ -21,11 +13,14 @@ export default function MainMenu({ playHover }) {
         { name: "CONFIG", className: styles.config},
     ];
     return (
-        <div className={styles.mainContainer}>
-            <video
-                className={styles.videoBg}
-                src= {menu} 
-                autoPlay loop muted playsInline />
+        <div className={`${styles.mainContainer} ${!videoOn ? styles.solidBg : ''}`}>
+            {videoOn && (
+                <video
+                    className={styles.videoBg}
+                    src={menu} 
+                    autoPlay loop muted playsInline 
+                />
+            )}
             <div className={styles.cornerTrapezoid}>
                 <div className={styles.name}>Bosco Chan</div>
                 <div className={styles.email}>chankinbok@gmail.com</div>

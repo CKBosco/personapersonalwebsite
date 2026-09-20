@@ -1,24 +1,17 @@
-import { useNavigate } from "react-router";
-import {useState} from "react";
 import styles from './Config.module.css';
 import { useTransitionNavigate } from '../Transition/useTransitionNavigate';
 import config from '../assets/Config.mp4';
-import hoverSound from '../assets/MenuHover.wav';
-export default function Config({ soundOn, setSoundOn, playHover }) {
+export default function Config({ soundOn, setSoundOn, playHover, videoOn, setVideoOn }) {
     const navigate = useTransitionNavigate();
-    const [videoOn, setVideoOn] = useState(true);
-    // const playHover = () => {
-    //     const sound = new Audio(hoverSound);
-    //     sound.volume = 0.2;
-    //     sound.play().catch(() => {});
-    // };
     return (
-        <div className={styles.mainContainer}>
-            <video
-                className={styles.videoBg}
-                src= {config} 
-                autoPlay loop muted playsInline 
-            />
+        <div className={`${styles.mainContainer} ${!videoOn ? styles.solidBg : ''}`}>
+            {videoOn && (
+                <video
+                    className={styles.videoBg}
+                    src={config} 
+                    autoPlay loop muted playsInline 
+                />
+            )}
             
             <div className={styles.back}
             onMouseEnter={playHover}

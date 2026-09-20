@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');.mainContainer {
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+.mainContainer {
     position: relative;
     height: 100vh;
     width: 100vw;
@@ -18,6 +19,10 @@
     height: 100%;
     object-fit: cover;
     z-index: -1;
+}
+
+.solidBg {
+    background-color: #191A73;
 }
 
 .educationContainer {

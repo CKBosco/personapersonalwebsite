@@ -19,18 +19,19 @@ function App() {
       sound.volume = 0.2;
       sound.play().catch(() => {});
   };
+  const [videoOn, setVideoOn] = useState(true);
 
   return (
     <>
     <VideoTransitionOverlay />
      <Routes>
-        <Route path="/" element={<MainMenu playHover={playHover} />} />
-        <Route path="/profile" element={<Profile playHover={playHover} />} />
-        <Route path="/education" element={<Education playHover={playHover} />} />
-        <Route path="/projects" element={<Projects playHover={playHover} />} />
-        <Route path="/skills" element={<Skills playHover={playHover} />} />
-        <Route path="/experience" element={<Experience playHover={playHover} />} />
-        <Route path="/config" element={<Config soundOn={soundOn} setSoundOn={setSoundOn} playHover={playHover} />} />
+        <Route path="/" element={<MainMenu playHover={playHover} videoOn={videoOn} />} />
+        <Route path="/profile" element={<Profile playHover={playHover} videoOn={videoOn} />} />
+        <Route path="/education" element={<Education playHover={playHover} videoOn={videoOn} />} />
+        <Route path="/projects" element={<Projects playHover={playHover} videoOn={videoOn} />} />
+        <Route path="/skills" element={<Skills playHover={playHover} videoOn={videoOn} />} />
+        <Route path="/experience" element={<Experience playHover={playHover} videoOn={videoOn} />} />
+        <Route path="/config" element={<Config soundOn={soundOn} setSoundOn={setSoundOn} playHover={playHover} videoOn={videoOn} setVideoOn={setVideoOn} />} />
      </Routes>
     </>
   )

@@ -1,27 +1,22 @@
-import { useNavigate } from "react-router";
 import { useState } from "react";
 import styles from './Projects.module.css';
 import { useTransitionNavigate } from '../Transition/useTransitionNavigate';
 import ProjVd from '../assets/skillsMV2.mp4';
-import hoverSound from '../assets/MenuHover.wav';
 import ProjectDetail from './ProjectDetail';
 import { projects } from './ProjectList';
 
-export default function Projects({ playHover }) {
+export default function Projects({ playHover, videoOn }) {
     const navigate = useTransitionNavigate();
-    // const playHover = () => {
-    //     const sound = new Audio(hoverSound);
-    //     sound.volume = 0.2;
-    //     sound.play().catch(() => {});
-    // };
     const [selectedProject, setSelectedProject] = useState(null);
     return (
-            <div className={styles.mainContainer}>
-                <video
-                    className={styles.videoBg}
-                    src= {ProjVd} 
-                    autoPlay loop muted playsInline 
-                />
+            <div className={`${styles.mainContainer} ${!videoOn ? styles.solidBg : ''}`}>
+                {videoOn && (
+                    <video
+                        className={styles.videoBg}
+                        src={ProjVd} 
+                        autoPlay loop muted playsInline 
+                    />
+                )}
                 <div className={styles.back}
                 onMouseEnter={playHover}
                 onClick={() => navigate("/")}

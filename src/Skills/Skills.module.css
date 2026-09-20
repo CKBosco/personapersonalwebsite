@@ -23,6 +23,10 @@
     pointer-events: none;
 }
 
+.solidBg {
+    background-color: #2537AB;
+}
+
 .back{
     font-family: 'Open Sans', sans-serif;
     font-weight: 800;

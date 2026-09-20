@@ -1,16 +1,9 @@
-import { useNavigate } from "react-router";
 import { useState } from "react";
 import styles from './Education.module.css';
 import { useTransitionNavigate } from '../Transition/useTransitionNavigate';
 import eduVd from '../assets/questMV2.mp4';
-import hoverSound from '../assets/MenuHover.wav';
-export default function Education({ playHover }) {
+export default function Education({ playHover, videoOn }) {
     const navigate = useTransitionNavigate();
-    // const playHover = () => {
-    //     const sound = new Audio(hoverSound);
-    //     sound.volume = 0.2;
-    //     sound.play().catch(() => {});
-    // };
     const uniDetails = {
         degree: "BSc Computer Science and Artificial Intelligence",
         date: "2024 - Present",
@@ -23,12 +16,14 @@ export default function Education({ playHover }) {
     }
     const [details, setDetails] = useState(uniDetails);
     return (
-        <div className={styles.mainContainer}>
-            <video
-                className={styles.videoBg}
-                src= {eduVd} 
-                autoPlay loop muted playsInline 
-            />
+        <div className={`${styles.mainContainer} ${!videoOn ? styles.solidBg : ''}`}>
+            {videoOn && (
+                <video
+                    className={styles.videoBg}
+                    src={eduVd} 
+                    autoPlay loop muted playsInline 
+                />
+            )}
             <div className={styles.back}
                 onMouseEnter={playHover}
                 onClick={() => navigate("/")}
