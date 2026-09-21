@@ -1,5 +1,5 @@
 import { useRef, useEffect } from 'react';
-import { useNavigate } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 import { useTransition } from './TransitionContext';
 import styles from './VideoTransitionOverlay.module.css';
 import transitionClip from '../assets/transition.mp4';
