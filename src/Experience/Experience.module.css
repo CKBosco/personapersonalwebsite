@@ -439,3 +439,13 @@ position: absolute;
         font-size: 0.95rem;
     }
 }
+
+@media (max-width: 480px) {
+    .expTitle {
+        font-size: 1rem;
+    }
+
+    .expCompany {
+        font-size: 1rem;
+    }
+}
