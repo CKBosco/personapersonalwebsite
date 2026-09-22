@@ -22,8 +22,8 @@ export const projects = [
         id: 1,
         name: "Persona style personal website",
         tools: "React, Git",
-        date: "Jul 2026 -",
-        details: "My personal website inspired by the Persona video game series, built with React and Git.",
+        date: "Jul 2026 - Aug 2026",
+        details: "Personal portfolio website inspired by the Persona video game series, built with React and version-controlled with Git.",
         image: mitsuru,
         portrait: mitsuruPortrait,
         shadow: mitsuruShadow

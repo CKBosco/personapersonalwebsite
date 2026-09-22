@@ -169,7 +169,7 @@
 }
 
 .expTime{
-position: absolute;
+    position: absolute;
     bottom: 8px;
     right: 15px;
     font-size: 0.8rem;
